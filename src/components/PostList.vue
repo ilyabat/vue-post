@@ -1,27 +1,23 @@
 <template>
   <div>
-    <div class="post" v-for="post in posts" :key="post.id">
-      <div><strong>Name:</strong>{{ post.title }}</div>
-      <div><strong>Description:</strong>{{ post.body }}</div>
-    </div>
+    <h3>List Post</h3>
+    <post-item :post="post" v-for="post in posts" :key="post.id" />
   </div>
 </template>
 
 <script>
+import PostItem from "@/components/PostItem.vue";
 export default {
-    props:{
-        posts:{
-            type: Array,
-            required: true,
-        }
-    }
+  components: { PostItem },
+  props: {
+    posts: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 
 <style scoped>
-.post {
-  margin-top: 15px;
-  padding: 15px;
-  border: 2px solid teal;
-}
+
 </style>

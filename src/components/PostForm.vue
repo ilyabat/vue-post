@@ -2,19 +2,20 @@
   <div>
     <form @submit.prevent>
       <h4>Create post</h4>
-      <input
+      <my-input
         v-model="post.title"
         class="input"
         type="text"
         placeholder="Name"
       />
-      <input v-model="post.body" class="input" type="text" placeholder="Desc" />
-      <button class="btn" @click="createPost">Create</button>
+      <my-input v-model="post.body" type="text" placeholder="Desc" />
+      <my-button @click="createPost">Create</my-button>
     </form>
   </div>
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -38,22 +39,13 @@ export default {
 </script>
 
 <style scoped>
+h4{
+  margin-bottom: 10px;
+}
 form {
   display: flex;
   flex-direction: column;
 }
-.input {
-  width: 100%;
-  border: 1px solid teal;
-  padding: 10px 15px;
-  margin-top: 10px;
-}
-.btn {
-  margin-top: 15px;
-  align-self: flex-end;
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
-}
+
+
 </style>
