@@ -5,15 +5,14 @@
         <div><strong>Name:</strong>{{ post.title }}</div>
         <div><strong>Description:</strong>{{ post.body }}</div>
       </div>
-      <div class="post__btn">
-        <my-button>Delete</my-button>
+      <div>
+        <my-button @click="$emit('remove', post)">Delete</my-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     post: {
@@ -32,7 +31,5 @@ export default {
   margin-top: 15px;
   padding: 15px;
   border: 2px solid teal;
-}
-.post__btn {
 }
 </style>
