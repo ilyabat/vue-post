@@ -22,5 +22,7 @@ export default {
 </script>
 
 <style scoped>
-
+h3{
+  margin-top: 10px;
+}
 </style>
