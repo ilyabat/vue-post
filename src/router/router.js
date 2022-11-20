@@ -10,15 +10,15 @@ const routes = [
         component: MainPage
     },
     {
-        path: '/posts',
+        path: '/vue-post/posts',
         component: PostPage
     },
     {
-        path: '/about',
+        path: '/vue-post/about',
         component: AboutPage
     },
     {
-        path: '/posts/:id',
+        path: '/vue-post/posts/:id',
         component: PostIdPage
     }
 ]
